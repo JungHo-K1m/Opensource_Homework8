@@ -1,4 +1,4 @@
-package ¿ÀÇÂ¼Ò½º°úÁ¦8;
+package ì˜¤í”ˆì†ŒìŠ¤ê³¼ì œ8;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -12,14 +12,12 @@ import javax.swing.JPanel;
  
 public class Quiz extends JFrame{
     Quiz(){
-        setTitle("Open Challenge 9"); // ÇÁ·¹ÀÓÀÇ Å¸ÀÌÆ² ´Þ±â
+        setTitle("Open Challenge 9"); 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // ÇÁ·¹ÀÓ À©µµ¿ì¸¦ ´ÝÀ¸¸é ÇÁ·Î±×·¥ Á¾·á
         Container c = getContentPane();
         c.setLayout(new BorderLayout()); 
-        // µðÆúÆ® °ªÀ¸·Î  ÀÌ ¹èÄ¡°ü¸®ÀÚ¸¦ °¡Áö°í ÀÖ±â ¶§¹®¿¡ µû·Î ¹èÄ¡°ü¸®ÀÚ ÁöÁ¤¾ÈÇØµµ µÊ
-        c.add(new NorthPanel(),BorderLayout.NORTH); // North ÆÐ³Î Ãß°¡
-        c.add(new CenterPanel(),BorderLayout.CENTER); // Center ÆÐ³Î Ãß°¡
+        c.add(new NorthPanel(),BorderLayout.NORTH); 
+        c.add(new CenterPanel(),BorderLayout.CENTER); 
         setSize(300,300);
         setVisible(true);
          
@@ -30,7 +28,7 @@ public class Quiz extends JFrame{
     }
      
 }
-class NorthPanel extends JPanel{ // NORTH¿¡ ºÙÀÏ ÆÐ³Î
+class NorthPanel extends JPanel{
     NorthPanel(){
         setBackground(Color.LIGHT_GRAY);
         this.add(new JButton("Open"));
@@ -38,7 +36,7 @@ class NorthPanel extends JPanel{ // NORTH¿¡ ºÙÀÏ ÆÐ³Î
         this.add(new JButton("Close"));
     }
 }
-class CenterPanel extends JPanel{ // CENTER¿¡ ºÙÀÏ ÆÐ³Î
+class CenterPanel extends JPanel{
     CenterPanel(){
         this.setLayout(null);
         String text[] = {"Hello", "Java", "Love"};
@@ -46,11 +44,11 @@ class CenterPanel extends JPanel{ // CENTER¿¡ ºÙÀÏ ÆÐ³Î
         int y;
         JLabel label;
         for(int i=0;i<3;i++) {
-            x = (int)(Math.random()*250); // ±ÛÀÚ Â©¸² ¹æÁö¸¦ À§ÇØ 50ÀÇ ¿©À¯¸¦ ³²±è
+            x = (int)(Math.random()*250); 
             y = (int)(Math.random()*250);
             label = new JLabel(text[i]);
-            label.setLocation(x, y); // ·£´ýÀ§Ä¡¿¡ label ºÙÀÌ±â
-            label.setSize(50,10); // label Å©±â ¼³Á¤
+            label.setLocation(x, y); 
+            label.setSize(50,10); 
             this.add(label);
         }
     }
